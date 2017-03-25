@@ -1,11 +1,9 @@
 import 'core-js/fn/object/assign';
 import React from 'react';
 import {
-  Switch,
-  Router,
-  browserHistory
-} from 'react-router';
-import mobileRoutes from './routers';
+  BrowserRouter
+} from 'react-router-dom';
+import App from './routers';
 import {
   render
 } from 'react-dom';
@@ -28,14 +26,13 @@ const history = createHistory();
 const middleware = routerMiddleware(history)
 const store = configureStore(initialState, middleware);
 
-
 // match({mobileRoutes, location: loc}, () => {
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Switch>
-        <Router routes={mobileRoutes} history={history}/>
-      </Switch>
+        <BrowserRouter history={history}>
+          <App/>
+        </BrowserRouter>
     </ConnectedRouter>
     </Provider>,
   document.getElementById('app')
