@@ -27,7 +27,7 @@ let config = Object.assign({}, baseConfig, {
     }),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
 
   ],
   module: defaultSettings.getDefaultModules()

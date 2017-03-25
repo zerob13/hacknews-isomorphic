@@ -27,7 +27,7 @@ let config = Object.assign({}, baseConfig, {
       allChunks: true
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"dev"',
@@ -41,7 +41,7 @@ let config = Object.assign({}, baseConfig, {
 // loaders
 config.module.rules.push({
   test: /\.(js|jsx)$/,
-  use: ['react-hot', 'babel-loader'],
+  use: ['react-hot-loader', 'babel-loader'],
   include: [path.join(__dirname, '/../client')],
   exclude: [path.join(__dirname, '/../client/statics')]
 });

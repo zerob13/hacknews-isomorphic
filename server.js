@@ -5,13 +5,14 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 const open = require('open');
+const port = 8888;
 
 new WebpackDevServer(webpack(config), config.devServer)
-  .listen(config.port, '0.0.0.0', (err) => {
+  .listen(port, '0.0.0.0', (err) => {
     if (err) {
       console.log(err);
     }
     console.log('Listening at localhost:' + config.port);
     console.log('Opening your system browser...');
-    open('http://localhost:' + config.port + '/webpack-dev-server/');
+    open('http://localhost:'+port+'/webpack-dev-server/');
   });
