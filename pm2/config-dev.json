@@ -1,0 +1,21 @@
+{
+  "name": "hacknews-react-dev",
+  "script": "app/app.js",
+  "node_args": [
+    "--debug=7000"
+  ],
+  "watch": [
+    "app",
+    "client"
+  ],
+  "ignore_watch": [
+    "node_modules"
+  ],
+  "watch_options": {
+    "followSymlinks": false
+  },
+  "env": {
+    "NODE_ENV": "dev"
+  }
+}
+
