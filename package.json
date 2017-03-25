@@ -37,7 +37,6 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.24.0",
-    "bower-webpack-plugin": "^0.1.9",
     "browserify-css": "^0.10.0",
     "chai": "^3.5.0",
     "copyfiles": "^1.2.0",
