@@ -6,6 +6,6 @@ import ReduxThunk from 'redux-thunk';
 import mobileReducer from '../reducers';
 
 
-export default function configureStore(initialState) {
-  return applyMiddleware(ReduxThunk)(createStore)(mobileReducer, initialState);
+export default function configureStore(initialState,history) {
+  return applyMiddleware(ReduxThunk,history)(createStore)(mobileReducer, initialState);
 }
